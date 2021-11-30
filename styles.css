@@ -1,3 +1,16 @@
 body {
-  background: orange;
+  background: #c4c4c4;
+}
+h1 {
+  text-align: center;
+}
+ul > li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: skyblue;
 }
