@@ -10,6 +10,7 @@
         width: 150px;
         /* height: 50px; */
         background-color: red;
+        overflow: hidden; /* 触发BFC  BFC 可以清除浮动*/
       }
       .father-box2 {
         width: 150px;
@@ -24,16 +25,6 @@
       }
       .child-box:nth-child(2) {
         background-color: skyblue;
-      }
-      /*
-      一额外标签法：
-        在浮动元素的末尾添加一个空的标签，例如 <div style="clear:both"></div>
-
-        优点：通俗易懂，书写方便
-        缺点：添加许多无意义的标签，结构化较差。
-      */
-      .clear {
-        clear: both;
       }
     </style>
   </head>
@@ -50,10 +41,17 @@
     </p>
     <p>在CSS 中， clear属性用于清除浮动，器基本语法格式如下：</p>
     <p>选择器{cleat:属性值（可选值：left right both）}</p>
+    <h4>父级添加 overflow 属性方法</h4>
+    <p>可以通过触发BFC 的方式，可以实现清除浮动效果</p>
+    <p>可以给父级添加：overflow 为 hidden auto scroll 都可以</p>
+    <p>优点： 代码简介</p>
+    <p>
+      缺点：
+      内容增多时容易造成不会自动换行导致内容被隐藏掉，无法显示需要益处的元素
+    </p>
     <div class="father-box1">
       <div class="child-box"></div>
       <div class="child-box"></div>
-      <div class="clear"></div>
     </div>
     <div class="father-box2"></div>
   </body>

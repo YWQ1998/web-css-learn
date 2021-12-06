@@ -25,15 +25,18 @@
       .child-box:nth-child(2) {
         background-color: skyblue;
       }
-      /*
-      一额外标签法：
-        在浮动元素的末尾添加一个空的标签，例如 <div style="clear:both"></div>
-
-        优点：通俗易懂，书写方便
-        缺点：添加许多无意义的标签，结构化较差。
-      */
-      .clear {
+      .clearfix:before,
+      .clearfix:after {
+        content: ''; /* 内容为小点， 尽量要有内容， 否则旧版本的浏览器会有空隙*/
+        display: table; /* 触发 BFC 方式外边距合并 */
+      }
+      .clearfix:after {
         clear: both;
+      }
+      .clearfix {
+        *zoom: 1;
+        /* * 代表ie6 ie7 能识别的特殊符号 带有这个 * 的属性 只有 IE6 IE7 才执行 */
+        /* zoom 就是 IE6 IE7 清除浮动的方法 */
       }
     </style>
   </head>
@@ -50,10 +53,12 @@
     </p>
     <p>在CSS 中， clear属性用于清除浮动，器基本语法格式如下：</p>
     <p>选择器{cleat:属性值（可选值：left right both）}</p>
-    <div class="father-box1">
+    <h4>使用 before 和 after 双伪元素清除浮动</h4>
+    <p>优点： 代码更加简洁</p>
+    <p>缺点： 由于 IE6~7 不支持：after 只用zoom：1 触发LasLayout</p>
+    <div class="father-box1 clearfix">
       <div class="child-box"></div>
       <div class="child-box"></div>
-      <div class="clear"></div>
     </div>
     <div class="father-box2"></div>
   </body>
