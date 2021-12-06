@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+      }
+      .son1 {
+        top: 10px;
+        left: 10px;
+        background-color: pink;
+      }
+      .son2 {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>元素的定位属性</h3>
+    <p>元素的定位属性主要包含两部分： 定位模式和边偏移</p>
+    <p>边偏移：top bottom left right</p>
+    <p>
+      定位模式：static（自动定位 默认的定位方式）relative（相对定位）
+      absolute（绝对定位）fixed（固定定位）
+    </p>
+    <h4>静态定位（static）</h4>
+    <p>
+      静态定位是所有元素的默认定位方式，
+      当position属性的取值为static时，可以将元素定位于静态位置。所谓的静态位置就是各个元素在HTML文档流中的默认位置。
+    </p>
+    <p>在静态定位状态下，无法通过边偏移属性来改变元素的位置</p>
+
+    <div class="son1"></div>
+    <div class="son2"></div>
+  </body>
+</html>
