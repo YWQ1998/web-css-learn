@@ -1,19 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    
-  </style>
-</head>
-<body>
-  <header></header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .clearfix:before, /*清除浮动*/
+      .clearfix:after {
+        content: "",
+        display: table,
+      }
+      .clearfix:after {
+        clear: both;
+      }
+      .clearfix {
+        *zoom: 1;
+      }
+      li { /* 列表 清除小点 */
+        list-style: none;
+      }
+      a {
+        color: #2b2b2b;
+        text-decoration: none;
+      }
+      input {
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+      }
+      .content {
+        width: 80%;
+        margin: 0 auto;
+        /* background-color:red; */
+      }
+      header {
+        width: 100%;
+        height: 80px;
+        background-color: pink;
+        overflow: hidden;
+      }
+      nav {
+        width: 600px;
+        margin: 25px auto;
+        height: 34px;
+        background-color: skyblue;
+      }
+      .logo {
+        float: left;
+      }
+      .navbar {
+        float: left;
+        height: 34px;
+        line-height: 34px;
+        margin-left: 15px;
+      }
+      .navbar ul li {
+        float: left;
+      }
+      .navbar ul li a{
+        display: block;
+        padding: 0 8px;
+
+      }
+      .navbar ul li a:hover{
+        border-bottom: 2px solid #00ffff;
+      }
+      .search {
+        float: right;
+        width: 124px;
+        height: 34px;
+        border: 1px solid #00ffff;
+        box-sizing: border-box;
+      }
+      .search input[type=text] {
+        padding-left: 5px;
+        float:left;
+        width: 89px;
+        height: 34px;
+        background-color: #00ffff;
+      }
+      .search input[type=submit] {
+        float:left;
+        background-color: #0274ff;
+        width: 33px;
+        height: 33px;
+        background: #00a4ff url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.7down.com%2Fattachment%2Fsoft%2F2014%2F0819%2F094709_59754070.png&refer=http%3A%2F%2Fwww.7down.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641359537&t=ad4c127319661f51f624028b19d57e64)center center no-repeat;
+        background-size: 34px 34px;
+      }
+      .person {
+        width: 100px;
+        float: right;
+        height: 34px;
+        line-height: 34px;
+      }
+      .person-image {
+        float: left;
+        width: 34px;
+        height: 34px;
+        background-color: red;
+        background: url(https://img1.baidu.com/it/u=105496718,1970821593&fm=26&fmt=auto) center no-repeat;
+        background-size: 34px;
+        border-radius: 50%;
+      }
+      .banner {
+        width: 100%;
+        height: 300px;
+        background-color: #400080;
+      }
+      .banner-one {
+        height: 300px;
+        background: url(https://img0.baidu.com/it/u=2527377848,3142573894&fm=26&fmt=auto) center no-repeat;
+        background-size: 100% 300px;
+      }
+      .slidebar {
+        float:left;
+        width: 140px;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.3);
+      }
+      .slidebar ul li a {
+        display: block;
+        padding: 0 10px;
+        color: #fff;
+        line-height: 30px;
+      }
+      .slidebar ul li a span{
+        float: right;
+        font-family: Arial;
+      }
+      .slidebar ul li a:hover {
+        color: #0274ff;
+      }
+      .timeTable {
+        float:right;
+        width: 150px;
+        height: 220px;
+        margin-top: 40px;
+        background-color: #e8e8e8;
+      }
+      .timeTable dt{
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 3px;
+        border-bottom: 1px solid #808080;
+        background-color: #00ffff;
+        color: #fff;
+      }
+      .timeTable dd {
+        height: 50px;
+        padding: 3px 0;
+        box-sizing: border-box;
+        border-bottom: 1px solid #808080;
+      }
+      .timeTable dd a {
+        text-align: center;
+      }
+      .timeTable dd a p:first-child{
+        font-size: 16px;
+      }
+      .timeTable dd a p:last-child{
+        font-size: 10px;
+      }
+      .timeTable dd:last-child{
+        border-bottom:none;
+      }
+      .timeTable dd:last-child a{
+        display: block;
+        width: 130px;
+        margin: 0 auto;
+        height: 30px;
+        line-height: 30px;
+        color: #00ffff;
+        /* background-color: red; */
+        border: 1px solid #00ffff;
+      }
+      .timeTable dd:last-child a:hover{
+        color: white;
+        /* background-color: red; */
+        border: 1px solid #00ffff;
+        background-color: #00ffff;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <!-- logo图片 -->
+          <img
+            src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.16pic.com%2F00%2F01%2F05%2F16pic_105438_b.jpg&refer=http%3A%2F%2Fpic1.16pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641350700&t=c5c117d31e309c1b6bb839ea28a67050"
+            alt="logo图片"
+            width="64px"
+            height="34px"
+          />
+        </div>
+        <!-- 导航栏 -->
+        <div class="navbar">
+          <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">课程</a></li>
+            <li><a href="">训练计划</a></li>
+          </ul>
+        </div>
+        <div class="person">
+          <div class="person-image"></div>
+          <span>个人中心</span>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="请输入课程名称" />
+          <input type="submit" value="" />
+        </div>
+      </nav>
+    </header>
+    <div class="banner">
+      <div class="banner-one content">
+        <div class="slidebar">
+          <ul>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+            <li>
+              <a href="#">左侧菜单<span>></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="timeTable">
+          <dt>我的课程</dt>
+          <dd>
+            <a
+              ><p>一级标题</p>
+              <p>二级标题</p></a
+            >
+          </dd>
+          <dd>
+            <a
+              ><p>一级标题</p>
+              <p>二级标题</p></a
+            >
+          </dd>
+          <dd>
+            <a
+              ><p>一级标题</p>
+              <p>二级标题</p></a
+            >
+          </dd>
+          <dd>
+            <a>更多课程</a>
+          </dd>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
