@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+      }
+      .box1 {
+        /* display: none; 隐藏元素 不是删除 元素一直在页面中 但是不保留位置 */
+        visibility: hidden; /* 隐藏元素 与 display：none 最大的区别是 他保留原来的位置*/
+        /* visible 显示元素 */
+      }
+      .box2 {
+        background-color: skyblue;
+      }
+      .father {
+        background-color: white;
+        width: 400px;
+        margin: 0 auto;
+        height: 400px;
+        border: 3px solid green;
+        position: relative;
+      }
+      .picture-confim {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -20px;
+        margin-left: -20px;
+      }
+      .pictur-hide {
+        position: absolute;
+        top: 0px;
+        left: 45px;
+        display: none;
+      }
+      .picture-confim:hover .pictur-hide {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h2>元素的显示与隐藏</h2>
+    <p>
+      在 CSS 中有三个显示和隐藏的单词比较常见， 分别是 display、visibility 和
+      overflow
+    </p>
+    <p>
+      他们的主要目的是让一个元素在页面中消失，但是不在文档源码中删除，最常见的是网站广告，点击关闭后消失不见，而重新刷新界面后广告又会重新显现出来
+    </p>
+    <h3>display 显示</h3>
+    <p>display 设置或检索对象是否以及如何显示</p>
+    <p>
+      display： none 隐藏对象，与他相反的是 display：block
+      除了转换为块级元素之外，同时还有显示元素的意思
+    </p>
+    <p>特点： 隐藏后，不再保留原来的位置。</p>
+    <h3>visibility 可见性</h3>
+    <p>设置或检索对象</p>
+    <p>visible： 对象可见</p>
+    <p>hidden： 对象隐藏</p>
+    <p>特点： 隐藏后，继续保留原来的位置。</p>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h2>鼠标移动显示二维码</h2>
+    <div class="father">
+      <div class="picture-confim">
+        <img
+          src="https://img0.baidu.com/it/u=1140215399,3886501523&fm=26&fmt=auto"
+          alt="点击图片"
+          width="40"
+          height="40"
+        />
+        <div class="pictur-hide">
+          <img
+            src="https://img1.baidu.com/it/u=1562963093,2774769360&fm=253&fmt=auto&app=120&f=JPEG?w=430&h=430"
+            alt="二维码图片"
+            width="120"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
