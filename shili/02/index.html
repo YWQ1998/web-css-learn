@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      .slidar {
+        width: 384px;
+        height: 216px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .slidar a {
+        display: block;
+        width: 30px;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+      }
+      .left-icon {
+        left: 0;
+      }
+      .right-icon {
+        right: 0;
+      }
+      .cirder {
+        width: 54px;
+        height: 13px;
+        line-height: 13px;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -27px;
+        border-radius: 27px;
+      }
+      .cirder li {
+        width: 9px;
+        height: 9px;
+        background-color: #ddd;
+        float: left;
+        border-radius: 50%;
+        margin: 2px;
+      }
+      .cirder .current {
+        background-color: #4fc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slidar">
+      <img
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg9.51tietu.net%2Fpic%2F2019-091400%2Fblcqnmm0nk5blcqnmm0nk5.jpg&refer=http%3A%2F%2Fimg9.51tietu.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641437274&t=cfed3ccb3cb84a96d555903db64ebcbb"
+        alt="卡通图片"
+        width="384"
+        height="216"
+        class="bg-image"
+      />
+      <a href="#" class="left-icon"><span><</span></a>
+      <a href="#" class="right-icon"><span>></span></a>
+      <ul class="cirder">
+        <li class="current"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father-box1 {
+        width: 150px;
+        /* height: 50px; */
+        background-color: red;
+      }
+      .father-box2 {
+        width: 150px;
+        height: 160px;
+        background-color: green;
+      }
+      .child-box {
+        width: 70px;
+        height: 50px;
+        background-color: pink;
+        float: left;
+      }
+      .child-box:nth-child(2) {
+        background-color: skyblue;
+      }
+      /*
+      一额外标签法：
+        在浮动元素的末尾添加一个空的标签，例如 <div style="clear:both"></div>
+
+        优点：通俗易懂，书写方便
+        缺点：添加许多无意义的标签，结构化较差。
+      */
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    清除浮动影响
+    <p>
+      如果son1 和 son2 都浮动了， 浮动的元素在普通流中不占据位置， 父亲没有高度
+      此时底部的盒子就会跑上来
+    </p>
+    <h4>清除浮动的方法</h4>
+    <p>
+      也叫作闭合浮动，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让他们出来影响替他的元素
+    </p>
+    <p>在CSS 中， clear属性用于清除浮动，器基本语法格式如下：</p>
+    <p>选择器{cleat:属性值（可选值：left right both）}</p>
+    <div class="father-box1">
+      <div class="child-box"></div>
+      <div class="child-box"></div>
+      <div class="clear"></div>
+    </div>
+    <div class="father-box2"></div>
+  </body>
+</html>

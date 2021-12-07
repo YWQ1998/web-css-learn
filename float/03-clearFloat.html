@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father-box1 {
+        width: 150px;
+        /* height: 50px; */
+        background-color: red;
+      }
+      .father-box2 {
+        width: 150px;
+        height: 160px;
+        background-color: green;
+      }
+      .child-box {
+        width: 70px;
+        height: 50px;
+        background-color: pink;
+        float: left;
+      }
+      .child-box:nth-child(2) {
+        background-color: skyblue;
+      }
+      .clearfix:after {
+        content: '.'; /* 内容为小点， 尽量要有内容， 否则旧版本的浏览器会有空隙*/
+        display: block; /* 转化为块级元素 */
+        height: 0; /* 高度为 0 */ 
+        visibility: hidden; /* 隐藏盒子 */
+        clear: both; /* 清除浮动 */
+      }
+      .clearfix {
+        *zoom: 1; 
+        /* * 代表ie6 ie7 能识别的特殊符号 带有这个 * 的属性 只有 IE6 IE7 才执行 */
+        /* zoom 就是 IE6 IE7 清除浮动的方法 */
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    清除浮动影响
+    <p>
+      如果son1 和 son2 都浮动了， 浮动的元素在普通流中不占据位置， 父亲没有高度
+      此时底部的盒子就会跑上来
+    </p>
+    <h4>清除浮动的方法</h4>
+    <p>
+      也叫作闭合浮动，清除浮动就是把浮动的盒子圈到里面，让父盒子闭合出口和入口不让他们出来影响替他的元素
+    </p>
+    <p>在CSS 中， clear属性用于清除浮动，器基本语法格式如下：</p>
+    <p>选择器{cleat:属性值（可选值：left right both）}</p>
+    <h4>使用 after 伪元素清除浮动的方法</h4>
+    <p>：after 方式为空元素的升级版， 好处是不用单独添加标签</p>
+    <p>优点： 符合闭合浮动思想， 结构语义化正确</p>
+    <p>
+      缺点：
+      由于 IE6~7 不支持：after 只用zoom：1 触发LasLayout
+    </p>
+    <div class="father-box1 clearfix">
+      <div class="child-box"></div>
+      <div class="child-box"></div>
+    </div>
+    <div class="father-box2"></div>
+  </body>
+</html>
