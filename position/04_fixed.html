@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+      .son {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+        position: fixed;
+        top: 10px;
+        left: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>元素的定位属性</h3>
+    <p>元素的定位属性主要包含两部分： 定位模式和边偏移</p>
+    <p>边偏移：top bottom left right</p>
+    <p>
+      定位模式：static（自动定位 默认的定位方式）relative（相对定位）
+      absolute（绝对定位）fixed（固定定位）
+    </p>
+    <h4>固定定位 （fixed）</h4>
+    <p>
+      固定定位是绝对定位的一种特殊形式。他一浏览器窗口我参照物来定义网页元素，当
+      position 属性的取值为fixed 时，即可将元素的定位模式设置为固定定位。
+    </p>
+    <h4>固定定位有两点：</h4>
+    <p>1.固定定位的元素跟父级元素没有任何关系，只认浏览器。</p>
+    <p>2.固定定位元素完全脱离标准流，不占有位置，不随这滚动条滚动。</p>
+    <div class="father">
+      父级元素
+      <div class="son">子级元素</div>
+    </div>
+  </body>
+</html>
