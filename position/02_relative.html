@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+      }
+      .son1 {
+        background-color: pink;
+      }
+      .son2 {
+        position: relative;
+        top: 80px;
+        left: 80px;
+        background-color: skyblue;
+      }
+      .son3 {
+        background-color: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>元素的定位属性</h3>
+    <p>元素的定位属性主要包含两部分： 定位模式和边偏移</p>
+    <p>边偏移：top bottom left right</p>
+    <p>
+      定位模式：static（自动定位 默认的定位方式）relative（相对定位）
+      absolute（绝对定位）fixed（固定定位）
+    </p>
+    <h4>相对定位 （relative）</h4>
+    <p>
+      相对定位是将元素相对于他在标准流中的位置进行定位，当position属性的取值为relative时，可以将元素定位于相对位置上。对于元素设置了相对定位后，可以通过边偏移属性改变元素的位置，但是它在文档中的位置任然保留。
+    </p>
+    <h4>注意：</h4>
+    <p>
+      1.
+      相对定位最重要的一点是，他可以通过边偏移位置，但是原来所占的位置继续占有。
+    </p>
+    <p>
+      2.
+      其次，每次移动的位置，是以自己的左上角为基点移动（相对于自己来移动位置），就是说相对定位的盒子任然在标准流中，他后面的盒子任然以标准流方式对待他（相对定位不脱标）
+    </p>
+    <div class="son1"></div>
+    <div class="son2"></div>
+    <div class="son3"></div>
+  </body>
+</html>
