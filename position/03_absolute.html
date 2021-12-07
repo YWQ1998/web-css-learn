@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+      }
+      .div1 {
+        position: absolute;
+        top: 540px;
+        left: 80px;
+        background-color: pink;
+      }
+      .div2 {
+        background-color: skyblue;
+      }
+      .father-box1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      .son1 {
+        position: absolute;
+        top: 680px;
+        left: 10px;
+        background-color: skyblue;
+      }
+      .father-box2 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        position: relative;
+      }
+      .son2 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: skyblue;
+      }
+      .tupian {
+        margin-top: 20px;
+        width: 222px;
+        height: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .tupian2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>元素的定位属性</h3>
+    <p>元素的定位属性主要包含两部分： 定位模式和边偏移</p>
+    <p>边偏移：top bottom left right</p>
+    <p>
+      定位模式：static（自动定位 默认的定位方式）relative（相对定位）
+      absolute（绝对定位）fixed（固定定位）
+    </p>
+    <h4>绝对定位 （absolute）</h4>
+    <p>
+      绝对定位使元素的位置与文档流无关，因此不占据空间。这一点与相对定位不同，相对定位实际上被看作普通流定位模型的一部分，因为元素的位置相对于它在普通流中的位置。
+    </p>
+    <h4>注意：</h4>
+    <p>
+      如果文档可以滚动，绝对定位会随着它滚动，因为元素最终会相对于正常流的某一部分定位。当position属性的取值为absolute时，可以将元素定位模式设置为绝对定位。
+    </p>
+    <h2>绝对定位示例</h2>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <h2>绝对定位示例 (父级没有定位)</h2>
+    <div class="father-box1">
+      <div class="son1">绝对定位示例 子对象</div>
+    </div>
+
+    <h2>绝对定位示例 (父级有定位)</h2>
+    <div class="father-box2">
+      <div class="son2">绝对定位示例 子对象</div>
+    </div>
+    <div class="tupian">
+      <img
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F03%2F32%2F40%2F5b84b7ede366d_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641435656&t=46f1b27f5035e8c0cafae796db27bef6"
+        alt="打折图标"
+        width="60"
+        height="60"
+        class="tupian2"
+      />
+      <img
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.3lian.com%2Fgaoqing%2F04%2F81%2F61.jpg&refer=http%3A%2F%2Fimg5.3lian.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641435474&t=6c945ea701e43ce6895f36c7db307e17"
+        alt="王老吉宣传tupian"
+        width="222"
+        height="300"
+        class="tupian1"
+      />
+    </div>
+  </body>
+</html>
