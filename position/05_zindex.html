@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+      }
+      .father {
+        width: 240px;
+        height: 240px;
+        border: 3px solid green;
+        position: relative;
+      }
+      .box1 {
+        background-color: pink;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 3;
+      }
+      .box2 {
+        background-color: purple;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+      }
+      .box3 {
+        background-color: skyblue;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h4>叠放层次（z-index）</h4>
+    <p>
+      当多个元素同时设置定位时，定位元素质检有可能会发生重叠。在 CSS
+      中想要调整重叠的定位元素的堆叠顺序，可以对定位元素应用 z-index
+      层叠等距属性，其取值可为正整数、负整数和 0。
+    </p>
+    <h4>注意：</h4>
+    <p>1.z-index 的默认值是0，取值越大，定位元素在层叠元素中月居上。</p>
+    <p>2.如果取值相同，则根据书写顺序，后来者居上。</p>
+    <p>3.后面的数字一定不能加单位。</p>
+    <p>
+      4.只有相对定位、绝对定位、固定定位有此属性，其余标准流、浮动、静态定位都无此属性，亦不可指定此属性。
+    </p>
+    <div class="father">
+      <div class="box1">盒子1</div>
+      <div class="box2">盒子2</div>
+      <div class="box3">盒子3</div>
+    </div>
+  </body>
+</html>
