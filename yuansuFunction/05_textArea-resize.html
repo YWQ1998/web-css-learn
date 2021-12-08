@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      textarea {
+        border: 2px solid pink;
+        /* outline: 5px solid green; */
+        outline: none; /* 表单的外边框一般是去掉的*/
+        background-color: skyblue;
+      }
+      .no-resize {
+        width: 160px;
+        height: 30px;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h2>css 高级技巧</h2>
+    <h3>CSS 用户界面样式</h3>
+    <p>
+      所谓的界面样式，就是更改一些用户操作的样式，比如更改用户鼠标样式，表单轮廓等，但是比如滚动条的样式改动收到了很多浏览器的抵制，一般不做修改
+    </p>
+    <h4>防止文本域拖拽 resize</h4>
+    <p>resize： none 可以防止浏览器随意的拖动文本域</p>
+
+    <hr />
+    <h4>可拖拽的文本域</h4>
+    <textarea name="" id="" cols="30" rows="2"></textarea>
+    <hr />
+    <h4>不可拖拽的文本域</h4>
+    <textarea name="" id="" cols="30" rows="10" class="no-resize"></textarea>
+  </body>
+</html>
