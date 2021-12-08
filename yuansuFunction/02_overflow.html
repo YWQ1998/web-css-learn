@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .visible-box {
+        border: 2px solid skyblue;
+        width: 130px;
+        height: 200px;
+        overflow: visible;
+      }
+      .auto-box {
+        border: 2px solid skyblue;
+        width: 140px;
+        height: 200px;
+        overflow: auto;
+      }
+      .hidden-box {
+        border: 2px solid skyblue;
+        width: 140px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .scroll-box {
+        border: 2px solid skyblue;
+        width: 140px;
+        height: 200px;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h4>overflow 溢出</h4>
+    <p>检索或设置当对象的内容超过器指定的高度及宽度是如何管理内容</p>
+    <p>visible： 比剪切内容也不添加滚动条。</p>
+    <div class="visible-box">
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+    </div>
+    <p>auto： 超出自动显示滚动条，不超出不显示滚动条。</p>
+    <div class="auto-box">
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+    </div>
+    <p>hidden： 不显示超过对象尺寸的内容，超出的部分隐藏掉。</p>
+    <div class="hidden-box">
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+    </div>
+    <p>scroll： 不管超出内容与否，总是显示滚动条。</p>
+    <div class="scroll-box">
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <p>测试123456789</p>
+      <!-- <p>测试123456789</p> -->
+      <!-- <p>测试123456789</p> -->
+    </div>
+  </body>
+</html>
