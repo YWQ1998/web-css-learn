@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      textarea {
+        border: 2px solid pink;
+        /* outline: 5px solid green; */
+        outline: none; /* 表单的外边框一般是去掉的*/
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h2>css 高级技巧</h2>
+    <h3>CSS 用户界面样式</h3>
+    <p>
+      所谓的界面样式，就是更改一些用户操作的样式，比如更改用户鼠标样式，表单轮廓等，但是比如滚动条的样式改动收到了很多浏览器的抵制，一般不做修改
+    </p>
+    <h4>垂直对齐 vertical-align</h4>
+    <p>设置或检索对象内容的垂直对齐方式</p>
+    <p>
+      vertical-align 不影响块级元素中的内容对齐，
+      他只针对行内元素或者行内块级元素，通常用来控制图片和表单与文字的对齐方式
+    </p>
+    <p>默认的图片（表单）与文字基线（baseline）对齐</p>
+    <p>vertical-align：baseline | top | middle | bottom</p>
+
+    <hr />
+    <h4>图片-文字 默认基线对齐</h4>
+    <img
+      src="https://img0.baidu.com/it/u=1941544975,286050273&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+      alt="兔子图片"
+      width="150"
+      style="vertical-align: baseline"
+    />
+    <span>123456789</span>
+    <hr />
+    <h4>图片-文字 中线对齐</h4>
+    <img
+      src="https://img0.baidu.com/it/u=1941544975,286050273&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+      alt="兔子图片"
+      width="150"
+      style="vertical-align: middle"
+    />
+    <span>123456789</span>
+    <hr />
+    <h4>文本域-文字 默认基线对齐</h4>
+    <span>123456789</span>
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      style="vertical-align: baseline"
+    ></textarea>
+    <hr />
+    <h4>文本域-文字 中线对齐</h4>
+    <span>123456789</span>
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      style="vertical-align: middle"
+    ></textarea>
+  </body>
+</html>
