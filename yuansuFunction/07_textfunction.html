@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 1px solid red;
+        width: 150px;
+        height: 18px;
+      }
+      .world-br {
+        /* word-break: normal; */
+        /* word-break: break-all; */
+        word-break: break-all;
+      }
+      .world-sp {
+        /* white-space: normal; */
+        white-space: nowrap;
+      }
+      .text-over {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h2>css 高级技巧</h2>
+    <h3>CSS 用户界面样式</h3>
+    <p>
+      所谓的界面样式，就是更改一些用户操作的样式，比如更改用户鼠标样式，表单轮廓等，但是比如滚动条的样式改动收到了很多浏览器的抵制，一般不做修改
+    </p>
+    <h3>溢出的文字隐藏</h3>
+    <h4>world-break： 自动换行设置</h4>
+    <p>normal 使用浏览器默认的换行规则</p>
+    <p>break-all 允许在单词内换行</p>
+    <p>keep-all 只能在半角空格或连字符处换行</p>
+    <p>主要用于处理英文单词</p>
+    <p>示例如下：</p>
+    <div class="world-br">css error en chrome : 'Unknown property name'</div>
+    <br />
+    <br />
+    <hr />
+    <h4>world-space： 是否换行</h4>
+    <p>设置或检索对象内文本显示方式。通常用于强制一行显示内容。</p>
+    <p>normal 默认处理方式</p>
+    <p>
+      nowrap 强制在同一行内显示所有文本，直到文本结束或者遇到 br 标签对象才换行
+    </p>
+    <div class="world-sp">
+      css error en chrome<br />
+      : 'Unknown property name'
+    </div>
+    <br />
+    <hr />
+    <h4>text-overflow： 文字溢出</h4>
+    <p>设置或检索是否用一个省略标记（...）标识对象内文本的溢出。</p>
+    <p>clip： 不显示省略标记（...）， 而是简单的裁切</p>
+    <p>ellipsis： 当前对象内文本溢出时显示省略标记（...）</p>
+    <p>注意： 一定要首先强制一行内显示，再次和overflow属性搭配使用</p>
+    <div class="text-over">css error en chrome : 'Unknown property name'</div>
+  </body>
+</html>
