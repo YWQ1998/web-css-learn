@@ -12,6 +12,14 @@
         outline: none; /* 表单的外边框一般是去掉的*/
         background-color: skyblue;
       }
+      .image-box {
+        width: 384px;
+        height: 216px;
+        background-color: red;
+      }
+      .image-box img {
+        display: block; /* 图片或者表单等行内块元素， 他的底线回和父级盒子的基线对齐，这样就会造成图片底部有一个空白的缝隙*/
+      }
     </style>
   </head>
   <body>
@@ -68,5 +76,14 @@
       rows="10"
       style="vertical-align: middle"
     ></textarea>
+    <hr />
+    <div class="image-box">
+      <img
+        src="https://img2.baidu.com/it/u=2842763149,821152972&fm=26&fmt=auto"
+        alt="街道图片"
+        width="384"
+        height="216"
+      />
+    </div>
   </body>
 </html>
