@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .scaleXY {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .scaleXY img {
+        transition: all 3s;
+      }
+      .scaleXY:hover img {
+        /* transform-origin: left top; */
+        transform: scale(0.8, 0.8);
+      }
+
+      .scaleX {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .scaleX img {
+        transition: all 3s;
+      }
+      .scaleX:hover img {
+        /* transform-origin: left top; */
+        transform: scaleX(1.2);
+      }
+
+      .scaleY {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .scaleY img {
+        transition: all 3s;
+      }
+      .scaleY:hover img {
+        transform-origin: left top;
+        transform: scaleY(0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>2D 变形（CSS3）transform</h3>
+    <p>
+      transform 值 CSS3
+      中具有颠覆性的特征之一，可以实现元素的位移、旋转、倾斜、缩放，甚至支持矩阵方式，配合过渡和即将学习的动画只是，可以取代大量之前只能靠
+      flash 才可以实现的效果。
+    </p>
+    <p>变形转换 transform：变化类型。</p>
+    <p>移动 scale（x, y）</p>
+    <p>
+      注意：
+      scale（）的取值默认为1，当值设置为0.01到0.99之间的任何值时，作用是使得元素缩小；当值设置为大于1.01时作用是让元素放大
+    </p>
+    <p>可以使用 scale（x, y） 水平和垂直方向同时缩放</p>
+    <div class="scaleXY">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+    <p>可以使用 scaleX（x） 仅水平方向缩放</p>
+    <div class="scaleX">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+    <p>可以使用 scaleY（y） 仅垂直方形缩放</p>
+    <div class="scaleY">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+  </body>
+</html>
