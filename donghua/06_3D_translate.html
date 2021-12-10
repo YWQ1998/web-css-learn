@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ratate-X {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        perspective: 1000px;
+      }
+      .ratate-X:hover img {
+        transition: all 5s;
+      }
+      .ratate-X:hover img {
+        transform: translateX(200px);
+      }
+      .ratate-Y {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        perspective: 600px;
+      }
+      .ratate-Y:hover img {
+        transition: all 5s;
+      }
+      .ratate-Y:hover img {
+        transform-origin: right;
+        transform: translateY(200px);
+      }
+      .ratate-Z {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        perspective: 600px;
+      }
+      .ratate-Z:hover img {
+        transition: all 5s;
+      }
+      .ratate-Z:hover img {
+        transform-origin: right top;
+        transform: translateZ(50px);
+      }
+      .ratate-XYZ {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        perspective: 600px;
+      }
+      .ratate-XYZ:hover img {
+        transition: all 5s;
+      }
+      .ratate-XYZ:hover img {
+        transform: translate3d(200px, 200px, 200px);
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>透视 perspective</h3>
+    <p>
+      电脑显示屏是一个 2D
+      平面，图像之所以有立体感（3D效果），其实只是一种视觉呈现，通过透视可以实现此目的。透视可以将一个
+      2D 平面，在旋转的过程中，呈现 3D 效果。
+    </p>
+    <p>透视原理： 近大远小</p>
+    <p>浏览器透视：把近大远小的所有图像，透视在屏幕上。</p>
+    <p>
+      perspective：视距，标识视点距离屏幕的长短。视点，用于模拟透视效果时人眼的位置。
+    </p>
+    <p>注意：并非任何情况下需要透视效果，根据卡法需要进行设置</p>
+    <p>perspective 一般作为一个属性，设置给父元素</p>
+    <p>X 轴移动</p>
+    <div class="ratate-X">
+      <img
+        src="https://img1.baidu.com/it/u=252912990,3908299091&fm=253&fmt=auto&app=120&f=JPEG?w=200&h=200"
+        alt="头像"
+      />
+    </div>
+    <p>Y 轴移动</p>
+    <div class="ratate-Y">
+      <img
+        src="https://img1.baidu.com/it/u=252912990,3908299091&fm=253&fmt=auto&app=120&f=JPEG?w=200&h=200"
+        alt="头像"
+      />
+    </div>
+    <p>Z 轴移动</p>
+    <div class="ratate-Z">
+      <img
+        src="https://img1.baidu.com/it/u=252912990,3908299091&fm=253&fmt=auto&app=120&f=JPEG?w=200&h=200"
+        alt="头像"
+      />
+    </div>
+    <p>XYZ 三轴移动</p>
+    <div class="ratate-XYZ">
+      <img
+        src="https://img1.baidu.com/it/u=252912990,3908299091&fm=253&fmt=auto&app=120&f=JPEG?w=200&h=200"
+        alt="头像"
+      />
+    </div>
+  </body>
+</html>
