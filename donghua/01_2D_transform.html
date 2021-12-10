@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .transformXY {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .transformXY img {
+        transition: all 3s;
+      }
+      .transformXY:hover img {
+        transform: translate(30px, 30px);
+      }
+
+      .transformX {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .transformX img {
+        transition: all 3s;
+      }
+      .transformX:hover img {
+        transform: translateX(30px);
+      }
+
+      .transformY {
+        width: 160px;
+        height: 220px;
+        background-color: pink;
+      }
+      .transformY img {
+        transition: all 3s;
+      }
+      .transformY:hover img {
+        transform: translateY(30px);
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>2D 变形（CSS3）transform</h3>
+    <p>
+      transform 值 CSS3
+      中具有颠覆性的特征之一，可以实现元素的位移、旋转、倾斜、缩放，甚至支持矩阵方式，配合过渡和即将学习的动画只是，可以取代大量之前只能靠
+      flash 才可以实现的效果。
+    </p>
+    <p>变形转换 transform：变化类型。</p>
+    <p>移动 translate（X, Y）</p>
+    <p>可以使用 translate（x, y） 水平和垂直方向同时移动</p>
+    <div class="transformXY">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+    <p>可以使用 translateX（x） 仅水平方向移动</p>
+    <div class="transformX">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+    <p>可以使用 translateY（y） 仅垂直方形移动</p>
+    <div class="transformY">
+      <img
+        src="https://img1.baidu.com/it/u=141254971,118422226&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+  </body>
+</html>
