@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 230px;
+        height: 230px;
+        margin: 20px auto;
+        position: relative;
+      }
+      .box:hover::before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        border: 10px solid rgba(255, 255, 255, 0.5);
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h2>before 和 after 伪元素 （详解）</h2>
+    <p>
+      之所以被称为伪元素，是因为他们不是真正的页面元素， HTML
+      没有对应的元素，但是其所有的用法和表现行为与真正的页面元素一样，可以对其使用诸如页面元素一样的
+      CSS 样式，表面上看上去貌似是页面的某些元素来展示，实际上是 CSS
+      样式展现的行为，因此被称为伪元素。是伪元素在 HTML 代码机制中的展现，
+      可以看出伪元素的结构无法审查
+    </p>
+    <h4>注意：</h4>
+    <p>
+      1. 伪元素 ：before 和 ：after 添加的内容默认是 inline 元素；
+      这两个伪元素的 content
+      属性，标识伪元素的内容，设置这两个伪元素的时候必须设置其 content
+      属性，否则伪元素就不起作用。
+    </p>
+    <p>2. 伪元素是不占位置的</p>
+    <div class="box">
+      <img
+        src="https://img1.baidu.com/it/u=2840769044,2584871973&fm=26&fmt=auto"
+        alt="卡通图片"
+      />
+    </div>
+  </body>
+</html>
