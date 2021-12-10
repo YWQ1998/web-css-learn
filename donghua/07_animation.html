@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .animation-box {
+        width: 80px;
+        height: 80px;
+        background-color: skyblue;
+        animation: go 2s linear 0s infinite alternate;
+        /* infinite 无限循环 */
+      }
+      /* @keyframes 动画名称 {} 定义动画 */
+      @keyframes go {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(600px)
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .pictures {
+        width: 768px;
+        height: 108px;
+        margin: 100px auto;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+      .pictures ul li{
+        list-style: none;
+      }
+      .pictures ul{
+        width: 1536px;
+        animation: moving 5s linear 0s infinite;
+      }
+      .pictures ul li{
+        float: left;
+      }
+      @keyframes moving {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-768px);
+        }
+      }
+      .pictures:hover ul{
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h4>动画（CSS3）animation</h4>
+    <p>动画是 CSS3 中具有的颠覆性的特征之一，可以通过设置多个节点来精确的控制一个或一组动画，常用来实现复杂的动画效果。</p>
+    <p>语法格式：animation：动画名称 动画时间 运动曲线 何时开始 播放次数 是否反方向</p>
+    <div class="animation-box">
+      动画效果
+    </div>
+
+    <p>
+      轮播图片
+    </p>
+    <div class="pictures">
+      <ul>
+        <li><img src="https://img1.baidu.com/it/u=3631594132,3972221223&fm=26&fmt=auto" width="192" height="108"></li>
+        <li><img src="https://img2.baidu.com/it/u=3491257176,104801501&fm=26&fmt=auto"  width="192" height="108"></li>
+        <li><img src="https://img2.baidu.com/it/u=2463832682,707578156&fm=26&fmt=auto"  width="192" height="108"></li>
+        <li><img src="https://img0.baidu.com/it/u=1630551213,176928304&fm=26&fmt=auto"  width="192" height="108"></li>
+        <li><img src="https://img1.baidu.com/it/u=3631594132,3972221223&fm=26&fmt=auto" width="192" height="108"></li>
+        <li><img src="https://img2.baidu.com/it/u=3491257176,104801501&fm=26&fmt=auto"  width="192" height="108"></li>
+        <li><img src="https://img2.baidu.com/it/u=2463832682,707578156&fm=26&fmt=auto"  width="192" height="108"></li>
+        <li><img src="https://img0.baidu.com/it/u=1630551213,176928304&fm=26&fmt=auto"  width="192" height="108"></li>
+      </ul>
+    </div>
+  </body>
+</html>
