@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .show-transition {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+      }
+      .show-transition:hover {
+        width: 240px;
+        height: 160px;
+        transition: width 3s ease 0s, height 2s ease-in 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>过渡</h3>
+    <p>
+      过渡（transition）是 CSS3 中具有颠覆性的特征之一，我们可以在不适用 flash
+      动画 或 JavaScript
+      的情况下，当元素从一种样式变换为另一种样式时为元素添加效果
+    </p>
+    <p>
+      在 css3 中使用 transition
+      可以实现补间动画（过渡效果），并且当前元素只要有“属性”发生变化时即存在两种状态，就可以实现平滑的过渡
+    </p>
+    <p>语法格式： transition：要过渡的属性 花费的时间 运动曲线 何时开始</p>
+    <p>要有多组属性变化还是用逗号隔开</p>
+
+    <h4>运动曲线</h4>
+    <p>
+      linear : 规定以相同速度开始至结束的过渡效果（等于
+      cubic-bezier(0,0,1,1)）。
+    </p>
+    <p>
+      ease :
+      规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+    </p>
+    <p>ease-in : 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</p>
+    <p>
+      ease-out : 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+    </p>
+    <p>
+      ease-in-out : 规定以慢速开始和结束的过渡效果（等于
+      cubic-bezier(0.42,0,0.58,1)）。
+    </p>
+    <p>
+      cubic-bezier(n,n,n,n) : 在 cubic-bezier 函数中定义自己的值。可能的值是 0
+      至 1 之间的数值。
+    </p>
+
+    <p>注意：花费的时间必须有单位 s</p>
+    <hr />
+    <div class="show-transition"></div>
+  </body>
+</html>
