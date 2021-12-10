@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      .rotate {
+        width: 160px;
+        height: 244px;
+        background-color: skyblue;
+      }
+      .rotate img {
+        transition: all 3s;
+      }
+      .rotate:hover img:nth-child(1) {
+        transform: rotate(360deg);
+      }
+      .rotate:hover img:nth-child(2) {
+        transform: rotate(-360deg);
+      }
+
+      .origin-box {
+        width: 160px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      .origin-box img {
+        transition: all 3s;
+      }
+      .origin-box:hover img {
+        transform-origin: right top;
+        transform: rotate(360deg);
+      }
+      .origin-box2 {
+        width: 160px;
+        height: 100px;
+        background-color: skyblue;
+      }
+      .origin-box2 img {
+        transition: all 3s;
+      }
+      .origin-box2:hover img {
+        transform-origin: 20px 20px;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../index.html">返回</a></h5>
+    <h3>2D 变形（CSS3）transform</h3>
+    <p>
+      transform 值 CSS3
+      中具有颠覆性的特征之一，可以实现元素的位移、旋转、倾斜、缩放，甚至支持矩阵方式，配合过渡和即将学习的动画只是，可以取代大量之前只能靠
+      flash 才可以实现的效果。
+    </p>
+    <p>变形转换 transform：变化类型。</p>
+    <p>旋转 rotate(deg)</p>
+    <p>可以对元素进行旋转，正值为顺时针，负值为逆时针。</p>
+    <p>注意：edg 是度数</p>
+    <div class="rotate">
+      <img
+        src="https://img2.baidu.com/it/u=866437829,2663966415&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+      <img
+        src="https://img2.baidu.com/it/u=866437829,2663966415&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160px"
+      />
+    </div>
+    <p>transform-origin 可以调整元素转换变形的原点</p>
+    <p>
+      transform-origin（left|right|center, left|right|center）
+      改变旋转中心点到图片的四个角
+    </p>
+    <div class="origin-box">
+      <img
+        src="https://img0.baidu.com/it/u=2295368949,3377621891&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160"
+      />
+    </div>
+    <p>transform-origin （x, y）以像素为单位精确定位旋转中心点</p>
+    <div class="origin-box2">
+      <img
+        src="https://img0.baidu.com/it/u=2295368949,3377621891&fm=26&fmt=auto"
+        alt="卡通图片"
+        width="160"
+      />
+    </div>
+  </body>
+</html>
