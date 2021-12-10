@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rotate-box {
+        width: 384px;
+        height: 216px;
+        margin: 100px auto;
+        background: url(https://img2.baidu.com/it/u=2777724525,1800442142&fm=26&fmt=auto)
+          no-repeat center;
+        perspective: 800px;
+      }
+      .rotate-l,
+      .rotate-r {
+        width: 50%;
+        height: 100%;
+        background-color: pink;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        position: relative;
+        transition: all 2s;
+      }
+      .rotate-l::before,
+      .rotate-r::before {
+        display: inline-block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 2px solid orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .rotate-l::before {
+        right: 5px;
+      }
+      .rotate-r::before {
+        left: 5px;
+      }
+      .rotate-box:hover .rotate-l {
+        transform-origin: left;
+        transform: rotateY(-130deg);
+      }
+      .rotate-box:hover .rotate-r {
+        transform-origin: right;
+        transform: rotateY(130deg);
+      }
+
+      .rotate-box2 {
+        width: 160px;
+        height: 160px;
+        background-color: skyblue;
+        margin: 100px auto;
+        position: relative;
+      }
+      .rotate-box2 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 1s;
+      }
+      .rotate-box2 img:first-child {
+        z-index: 1;
+        backface-visibility: hidden; /* 不是正面对象屏幕， 就隐藏该元素 */
+      }
+      .rotate-box2:hover img {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h5><a href="../../index.html">返回</a></h5>
+    <div class="rotate-box">
+      <div class="rotate-l"></div>
+      <div class="rotate-r"></div>
+    </div>
+
+    <div class="rotate-box2">
+      <img
+        src="https://img2.baidu.com/it/u=3773959092,1396375549&fm=253&fmt=auto&app=138&f=JPEG?w=160&h=160"
+        alt=""
+      />
+      <img
+        src="https://img0.baidu.com/it/u=4209115704,542211732&fm=26&fmt=auto"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
