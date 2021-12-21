@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .info-row {
+        width: 80%;
+        margin-top: 10px;
+      }
+      .row-title {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 39%;
+        line-height: 30px;
+        text-align: right;
+        /* background-color: skyblue; */
+      }
+      .input-box {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 60%;
+        vertical-align: middle;
+        /* background-color: pink; */
+        border: 1px solid #e8e8e8;
+      }
+      .input-outBox {
+        display: inline-block;
+        width: 84%;
+        float: left;
+      }
+      .input-outBox input {
+        width: 100%;
+        line-height: 30px;
+        outline: none;
+        border: none;
+      }
+      .searchIcon {
+        float: right;
+        display: inline-block;
+        width: 8%;
+        height: 30px;
+        position: relative;
+        /* background-color: pink; */
+      }
+      .searchIcon .icon::before {
+        content: 'Q';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .closeIcon {
+        width: 8%;
+        float: right;
+        display: inline-block;
+        /* background-color: skyblue; */
+        position: relative;
+      }
+      .closeIcon .icon::before {
+        content: 'X';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .icon {
+        height: 30px;
+        line-height: 30px;
+        /* background-color: red; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>输入框盒子</h1>
+    <div class="info-row">
+      <span class="row-title">标题：</span>
+      <div class="input-box">
+        <div class="input-outBox"><input /></div>
+        <div class="searchIcon"><div class="icon"></div></div>
+        <div class="closeIcon"><div class="icon"></div></div>
+      </div>
+    </div>
+
+    <select>
+
+    <option value="html">html</option>
+    
+    <option value="css">css</option>
+    
+    <option value="JavaScript">JavaScript</option>
+    
+    <option value="php">php</option>
+    
+    </select>
+  </body>
+</html>
